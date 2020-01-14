@@ -163,7 +163,7 @@ In this exercise you will configure a simulated device written in C# to connect 
 
 ### Task 1: Open the C# Code Project
 
-1. Using **Visual Studio Code**, open the `/LabFiles` folder.
+1. Using **Visual Studio Code**, open the `/home/luckposht/AZ-220-Microsoft-Azure-IoT-Developer/Allfiles/Labs/04-Connect IoT Device to Azure/Starter/` folder.
 
     Check with your instructor to locate the code project, either in the GitHub folder or on the Host PC.
 
