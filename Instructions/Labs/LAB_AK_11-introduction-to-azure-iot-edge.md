@@ -533,10 +533,10 @@ To prepare the Stream Analytics job to be deployed to an IoT Edge Device, it nee
         - Value: `FROM /messages/modules/tempsensor/* INTO $upstream`
     - Route 2
         - Name: **alertsToReset**
-        - Value: `FROM /messages/modules/AZ-220-ASA-{YOUR-ID}/* INTO BrokeredEndpoint(\"/modules/tempsensor/inputs/control\")`
+        - Value: `FROM /messages/modules/AZ-220-ASA-{YOUR-ID}/* INTO BrokeredEndpoint("/modules/tempsensor/inputs/control")`
     - Route 3
         - Name: **telemetryToAsa**
-        - Value: `FROM /messages/modules/tempsensor/* INTO BrokeredEndpoint(\"/modules/AZ-220-ASA-{YOUR-ID}/inputs/temperature\")`
+        - Value: `FROM /messages/modules/tempsensor/* INTO BrokeredEndpoint("/modules/AZ-220-ASA-{YOUR-ID}/inputs/temperature")`
 
     Be sure to replace the `AZ-220-ASA-{YOUR-ID}` placeholder with the name of your Azure Stream Analytics job module. You can click **Previous** to view the list of modules and their names, then click **Next** to come back to this step.
 
