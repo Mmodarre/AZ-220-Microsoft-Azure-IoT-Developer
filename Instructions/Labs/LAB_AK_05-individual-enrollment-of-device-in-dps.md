@@ -408,7 +408,7 @@ With the simulated device running, the `telemetryDelay` configuration can be upd
 
 In this unit you will perform the necessary tasks to retire the device from both the Device Provisioning Service (DPS) and Azure IoT Hub. To fully retire an IoT Device from an Azure IoT solution it must be removed from both of these services. When the transport box arrives at it's final destination, then sensor will be removed from the box, and needs to be "decommissioned". Complete device retirement is an important step in the life cycle of IoT devices within an IoT solution.
 
-### Task 1: Retire the device from the DPS
+### Task 1: Retire(Temporary and Permanent) the device from the DPS
 
 1. If necessary, log in to your Azure portal using your Azure account credentials.
 
@@ -424,12 +424,29 @@ In this unit you will perform the necessary tasks to retire the device from both
 
 1. In the Manage enrollments pane, click on the **individual enrollments** link to view the list of individual device enrollments.
 
-1. Select the `DPSSimulatedDevice1` individual device enrollment by checking the box next to it in the list, then click **Delete** from the top of the blade.
-
-    > [!NOTE]
+> [!NOTE]
     > Deleting the individual enrollment from DPS will permanently remove the enrollment. To temporarily disable the enrollment, you can set the **Enable entry** setting to **Disable** within the **Enrollment Details** for the individual enrollment.
 
+#### Task1.1 Temporary disable enrollment:
+
+1. In the list, click on the **DPSSimulatedDevice1** individual enrollment view the enrollment details.
+
+1. At the bottom of the page set **Enable entry** setting to **Disable** within the **Enrollment Details**
+
+1. Go back to Visual Studio code and try re-running the application by running ```dotnet run``` command and notice the exception thrown by the application code.
+
+1. change **Enable entry** back to **Enable**
+
+1. Re-run the code by running the same command and notice the application re-start working as expected.
+
+#### Task 1.2 Permanently retire device:
+1. Go back to **individual enrollments** page
+
+1. Select the `DPSSimulatedDevice1` individual device enrollment by checking the box next to it in the list, then click **Delete** from the top of the blade.
+
 1. On the **Remove enrollment** prompt, click **Yes** to confirm that you want to delete this device enrollment from the Device Provisioning Service.
+
+1. Try re-running the code again using ```dotnet run``` command and notice the application output.
 
     The individual enrollment is now removed from the Device Provisioning Service (DPS). To complete the device retirement, the **Device ID** for the Simulated Device also must be removed from the **Azure IoT Hub** service.
 
