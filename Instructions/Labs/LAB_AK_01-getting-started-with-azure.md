@@ -43,7 +43,7 @@ Although we commonly refer to Azure as a 'cloud', it is actually a web portal th
 
 1. On the portal menu, to display the **Home** page, click **Home**.
 
-1. On the home page, to display a map of data center regions, under **Azure services**, click **Service Health**.
+1. On the home page, to display a map of data center regions, under **Azure services**, click **Monitor** and choose **Service Health** from left hand menu.
 
     When you subscribe to a resource in Azure you'll pick a region to deploy it to. Azure is supported by a series of regions placed all around the world.
 
